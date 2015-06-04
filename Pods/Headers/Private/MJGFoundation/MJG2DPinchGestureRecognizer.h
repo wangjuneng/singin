@@ -1,0 +1,1 @@
+../../../MJGFoundation/Source/View/MJG2DPinchGestureRecognizer.h

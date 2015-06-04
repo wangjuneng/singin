@@ -1,0 +1,1 @@
+../../../MJGFoundation/Source/Categories/NSData/NSData-MJGZip.h
