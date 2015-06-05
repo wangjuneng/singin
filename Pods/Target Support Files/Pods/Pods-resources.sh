@@ -62,14 +62,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "MJGFoundation/Resources/MJGRateView/star_off@2x.png"
   install_resource "MJGFoundation/Resources/MJGRateView/star_on.png"
   install_resource "MJGFoundation/Resources/MJGRateView/star_on@2x.png"
-  install_resource "MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefresh.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "MJGFoundation/Resources/MJGRateView/star_off.png"
   install_resource "MJGFoundation/Resources/MJGRateView/star_off@2x.png"
   install_resource "MJGFoundation/Resources/MJGRateView/star_on.png"
   install_resource "MJGFoundation/Resources/MJGRateView/star_on@2x.png"
-  install_resource "MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefresh.bundle"
 fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

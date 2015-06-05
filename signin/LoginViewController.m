@@ -8,7 +8,11 @@
 
 #import "LoginViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController()<UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *loginId;
+
+@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end
 
@@ -16,7 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _loginId.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +39,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+-(void) textFieldDidBeginEditing:(UITextField *)textField
+{
+    [textField becomeFirstResponder];
+}
+
+
 
 @end
