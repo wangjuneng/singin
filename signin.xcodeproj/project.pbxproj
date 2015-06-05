@@ -12,6 +12,14 @@
 		18049B6A1B20A77B00B55801 /* login_textfield_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 18049B691B20A77B00B55801 /* login_textfield_bottom.png */; };
 		18049B6D1B20B55900B55801 /* login_btn_blue_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 18049B6B1B20B55900B55801 /* login_btn_blue_nor.png */; };
 		18049B6E1B20B55900B55801 /* login_btn_blue_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 18049B6C1B20B55900B55801 /* login_btn_blue_press.png */; };
+		181D94E01B2183CA00304148 /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D94DF1B2183CA00304148 /* AppUtils.m */; };
+		181D94E31B2186AA00304148 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D94E21B2186AA00304148 /* BaseViewController.m */; };
+		181D94E61B218CEA00304148 /* BaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D94E51B218CEA00304148 /* BaseHandler.m */; };
+		181D94EA1B21900700304148 /* LoginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D94E91B21900700304148 /* LoginHandler.m */; };
+		181D94ED1B2190CE00304148 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D94EC1B2190CE00304148 /* BaseEntity.m */; };
+		181D94F01B21933F00304148 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D94EF1B21933F00304148 /* UserEntity.m */; };
+		181D94F61B21970700304148 /* RTHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D94F31B21970700304148 /* RTHttpClient.m */; };
+		181D94F71B21970700304148 /* RTJSONResponseSerializerWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D94F51B21970700304148 /* RTJSONResponseSerializerWithData.m */; };
 		182AA5981B203F38002867F5 /* login_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 182AA5961B203F38002867F5 /* login_bg.png */; };
 		182AA5991B203F38002867F5 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 182AA5971B203F38002867F5 /* main_bg.png */; };
 		182AA59D1B20401E002867F5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182AA59C1B20401E002867F5 /* LoginViewController.m */; };
@@ -21,7 +29,6 @@
 		18D6123B1B202FDD00542610 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6123A1B202FDD00542610 /* AppDelegate.m */; };
 		18D612411B202FDD00542610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D6123F1B202FDD00542610 /* Main.storyboard */; };
 		18D612431B202FDD00542610 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D612421B202FDD00542610 /* Images.xcassets */; };
-		18D612461B202FDD00542610 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D612441B202FDD00542610 /* LaunchScreen.xib */; };
 		18D612521B202FDD00542610 /* signinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612511B202FDD00542610 /* signinTests.m */; };
 		EFFDC347577659178FC7B170 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF556B122194049068B92E8 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -43,6 +50,25 @@
 		18049B6B1B20B55900B55801 /* login_btn_blue_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_btn_blue_nor.png; sourceTree = "<group>"; };
 		18049B6C1B20B55900B55801 /* login_btn_blue_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_btn_blue_press.png; sourceTree = "<group>"; };
 		1810F4B71B2049DD001D9AC5 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		181D94DE1B2183CA00304148 /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
+		181D94DF1B2183CA00304148 /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
+		181D94E11B2186AA00304148 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		181D94E21B2186AA00304148 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		181D94E41B218CEA00304148 /* BaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHandler.h; sourceTree = "<group>"; };
+		181D94E51B218CEA00304148 /* BaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHandler.m; sourceTree = "<group>"; };
+		181D94E71B218D1800304148 /* APIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		181D94E81B21900700304148 /* LoginHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginHandler.h; sourceTree = "<group>"; };
+		181D94E91B21900700304148 /* LoginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginHandler.m; sourceTree = "<group>"; };
+		181D94EB1B2190CE00304148 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		181D94EC1B2190CE00304148 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		181D94EE1B21933F00304148 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
+		181D94EF1B21933F00304148 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		181D94F21B21970700304148 /* RTHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHttpClient.h; sourceTree = "<group>"; };
+		181D94F31B21970700304148 /* RTHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTHttpClient.m; sourceTree = "<group>"; };
+		181D94F41B21970700304148 /* RTJSONResponseSerializerWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTJSONResponseSerializerWithData.h; sourceTree = "<group>"; };
+		181D94F51B21970700304148 /* RTJSONResponseSerializerWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTJSONResponseSerializerWithData.m; sourceTree = "<group>"; };
+		181D94F81B219B3700304148 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		181D94F91B21DA4F00304148 /* signin-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "signin-ios-Prefix.pch"; sourceTree = "<group>"; };
 		182AA5961B203F38002867F5 /* login_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg.png; sourceTree = "<group>"; };
 		182AA5971B203F38002867F5 /* main_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bg.png; sourceTree = "<group>"; };
 		182AA59B1B20401E002867F5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -57,7 +83,6 @@
 		18D6123A1B202FDD00542610 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18D612401B202FDD00542610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18D612421B202FDD00542610 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		18D612451B202FDD00542610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		18D6124B1B202FDD00542610 /* signinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D612501B202FDD00542610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D612511B202FDD00542610 /* signinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = signinTests.m; sourceTree = "<group>"; };
@@ -100,6 +125,17 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		181D94F11B2196F500304148 /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				181D94F21B21970700304148 /* RTHttpClient.h */,
+				181D94F31B21970700304148 /* RTHttpClient.m */,
+				181D94F41B21970700304148 /* RTJSONResponseSerializerWithData.h */,
+				181D94F51B21970700304148 /* RTJSONResponseSerializerWithData.m */,
+			);
+			name = HttpClient;
+			sourceTree = "<group>";
+		};
 		182AA5951B203EDC002867F5 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +148,6 @@
 		182AA59A1B203FA8002867F5 /* xib */ = {
 			isa = PBXGroup;
 			children = (
-				18D612441B202FDD00542610 /* LaunchScreen.xib */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -122,6 +157,7 @@
 			children = (
 				18D6123A1B202FDD00542610 /* AppDelegate.m */,
 				18D612391B202FDD00542610 /* AppDelegate.h */,
+				181D94F81B219B3700304148 /* Constants.h */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -129,6 +165,12 @@
 		189D058B1B2036C2002D161E /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				181D94E11B2186AA00304148 /* BaseViewController.h */,
+				181D94E21B2186AA00304148 /* BaseViewController.m */,
+				181D94E41B218CEA00304148 /* BaseHandler.h */,
+				181D94E51B218CEA00304148 /* BaseHandler.m */,
+				181D94EB1B2190CE00304148 /* BaseEntity.h */,
+				181D94EC1B2190CE00304148 /* BaseEntity.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -145,6 +187,8 @@
 		189D058D1B2036F2002D161E /* Handler */ = {
 			isa = PBXGroup;
 			children = (
+				181D94E81B21900700304148 /* LoginHandler.h */,
+				181D94E91B21900700304148 /* LoginHandler.m */,
 			);
 			name = Handler;
 			sourceTree = "<group>";
@@ -152,6 +196,8 @@
 		189D058E1B2036FE002D161E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				181D94EE1B21933F00304148 /* UserEntity.h */,
+				181D94EF1B21933F00304148 /* UserEntity.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -159,6 +205,8 @@
 		189D058F1B203707002D161E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				181D94F11B2196F500304148 /* HttpClient */,
+				181D94E71B218D1800304148 /* APIConfig.h */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -188,6 +236,8 @@
 		189D05931B203733002D161E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				181D94DE1B2183CA00304148 /* AppUtils.h */,
+				181D94DF1B2183CA00304148 /* AppUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -255,6 +305,7 @@
 		18D612351B202FDD00542610 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				181D94F91B21DA4F00304148 /* signin-ios-Prefix.pch */,
 				18D612421B202FDD00542610 /* Images.xcassets */,
 				18D612361B202FDD00542610 /* Info.plist */,
 				18D612371B202FDD00542610 /* main.m */,
@@ -375,7 +426,6 @@
 				182AA5981B203F38002867F5 /* login_bg.png in Resources */,
 				18049B6A1B20A77B00B55801 /* login_textfield_bottom.png in Resources */,
 				18D612411B202FDD00542610 /* Main.storyboard in Resources */,
-				18D612461B202FDD00542610 /* LaunchScreen.xib in Resources */,
 				18049B661B20925900B55801 /* login_textfield_top.png in Resources */,
 				18D612431B202FDD00542610 /* Images.xcassets in Resources */,
 				182AA5991B203F38002867F5 /* main_bg.png in Resources */,
@@ -430,9 +480,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181D94F71B21970700304148 /* RTJSONResponseSerializerWithData.m in Sources */,
 				18D6123B1B202FDD00542610 /* AppDelegate.m in Sources */,
+				181D94E31B2186AA00304148 /* BaseViewController.m in Sources */,
 				18D612381B202FDD00542610 /* main.m in Sources */,
+				181D94EA1B21900700304148 /* LoginHandler.m in Sources */,
+				181D94F61B21970700304148 /* RTHttpClient.m in Sources */,
+				181D94E61B218CEA00304148 /* BaseHandler.m in Sources */,
 				182AA59D1B20401E002867F5 /* LoginViewController.m in Sources */,
+				181D94F01B21933F00304148 /* UserEntity.m in Sources */,
+				181D94E01B2183CA00304148 /* AppUtils.m in Sources */,
+				181D94ED1B2190CE00304148 /* BaseEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,14 +521,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		18D612441B202FDD00542610 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18D612451B202FDD00542610 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -491,7 +541,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (W5X736XVC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (W5X736XVC4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -499,6 +550,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -534,13 +586,15 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (W5X736XVC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (W5X736XVC4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -561,6 +615,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (W5X736XVC4)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "signin/signin-ios-Prefix.pch";
 				INFOPLIST_FILE = signin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -580,6 +636,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (W5X736XVC4)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "signin/signin-ios-Prefix.pch";
 				INFOPLIST_FILE = signin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

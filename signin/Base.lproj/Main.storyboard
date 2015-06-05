@@ -8,12 +8,12 @@
         <!--Login View Controller-->
         <scene sceneID="fd1-5p-UG1">
             <objects>
-                <viewController id="ok3-Qd-D9T" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="ok3-Qd-D9T" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x3M-eR-yHQ"/>
                         <viewControllerLayoutGuide type="bottom" id="ff3-k5-5cF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ldk-aL-mIE">
+                    <view key="view" contentMode="scaleToFill" id="ldk-aL-mIE" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -43,11 +43,15 @@
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nqu-iA-rpd" userLabel="帐号输入框">
                                                 <rect key="frame" x="54" y="14" width="238" height="30"/>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="HVB-bl-JI0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="loginId_didEndOnExit:" destination="ok3-Qd-D9T" eventType="editingDidEndOnExit" id="Oix-vU-hS4"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -102,14 +106,21 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="highlighted" image="login_btn_blue_press.png"/>
+                                                <connections>
+                                                    <action selector="loginBtnAction:" destination="ok3-Qd-D9T" eventType="touchUpInside" id="lKa-so-3lW"/>
+                                                </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjb-JF-xd5" userLabel="密码输入框">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bjb-JF-xd5" userLabel="密码输入框">
                                                 <rect key="frame" x="52" y="8" width="238" height="30"/>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="BB8-E5-gv4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="password_didEndOnExit:" destination="ok3-Qd-D9T" eventType="editingDidEndOnExit" id="ofd-GD-KZo"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -155,6 +166,9 @@
                             <constraint firstItem="cZt-Og-j8B" firstAttribute="leading" secondItem="ldk-aL-mIE" secondAttribute="leading" id="jTu-4u-ePB"/>
                             <constraint firstItem="dPU-sK-mWk" firstAttribute="centerY" secondItem="cZt-Og-j8B" secondAttribute="centerY" id="vUL-WT-crP"/>
                         </constraints>
+                        <connections>
+                            <action selector="mainViewAction:" destination="ok3-Qd-D9T" eventType="touchDown" id="dTi-j3-6N0"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>

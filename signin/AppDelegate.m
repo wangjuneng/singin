@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    // 从storyboard创建loginViewController
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    LoginViewController *logingViewController= (LoginViewController *)[storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+    
+    //将loginViewController 作为navigationController的顶层容器
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:logingViewController];
+    
+    self.window.rootViewController = navigationController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

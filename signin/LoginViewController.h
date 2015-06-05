@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : BaseViewController
+
+#pragma mark 属性定义
+//帐号
+@property (weak, nonatomic) IBOutlet UITextField *loginId;
+//密码
+@property (weak, nonatomic) IBOutlet UITextField *password;
+
+#pragma mark 事件定义
+- (IBAction)mainViewAction:(id)sender;
+
+- (IBAction)loginBtnAction:(UIButton *)sender;
+
+- (IBAction)loginId_didEndOnExit:(id)sender;
+
+- (IBAction)password_didEndOnExit:(id)sender;
 
 @end
