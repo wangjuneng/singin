@@ -7,9 +7,13 @@
 //
 
 #import "LoginViewController.h"
+#import "LoginHandler.h"
+#import "UserEntity.h"
 
 @interface LoginViewController()
 
+//服务请求
+@property(strong,nonatomic) LoginHandler * loginHandler;
 
 
 @end
@@ -21,6 +25,9 @@
     
     //首页面不显示导航栏
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    //初始化服务请求
+    _loginHandler = [[LoginHandler alloc] init];
     
 }
 
@@ -79,8 +86,32 @@
     
     NSString * passwordMd5Txt = [AppUtils md5FromString:passwordTxt];
     
+    [AppUtils showProgressMessageWithGradient: @"数据加载中..."];
     
-   [AppUtils showProgressMessageWithGradient: @"数据加载中..."];
+    //生成签名
+    NSString * sign = [AppUtils createSignString:@[loginIdTxt,passwordMd5Txt]];
+    
+    
+    NSDictionary *parameters = @{@"loginId":loginIdTxt,@"loginPassword":passwordMd5Txt,@"sign":sign};
+    
+    [_loginHandler executeLoginTaskWithUser: parameters success:^(UserEntity * obj) {
+   
+        //验证成功
+        if([obj success])
+        {
+            [AppUtils dismissHUD];
+            [AppUtils showAlertMessage:@"登录成功"];
+        }
+        else
+        {
+            [AppUtils dismissHUD];
+            [AppUtils showAlertMessage:[obj msg]];
+        }
+        
+    } failed:^(id obj) {
+        [AppUtils dismissHUD];
+    }];
+   
     
 }
 @end

@@ -66,6 +66,12 @@
 #define COCOAPODS_VERSION_MINOR_MJGFoundation_MJGAvailability 0
 #define COCOAPODS_VERSION_PATCH_MJGFoundation_MJGAvailability 2
 
+// OpenUDID
+#define COCOAPODS_POD_AVAILABLE_OpenUDID
+#define COCOAPODS_VERSION_MAJOR_OpenUDID 1
+#define COCOAPODS_VERSION_MINOR_OpenUDID 0
+#define COCOAPODS_VERSION_PATCH_OpenUDID 0
+
 // Reachability
 #define COCOAPODS_POD_AVAILABLE_Reachability
 #define COCOAPODS_VERSION_MAJOR_Reachability 3

@@ -23,6 +23,9 @@
 		182AA5981B203F38002867F5 /* login_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 182AA5961B203F38002867F5 /* login_bg.png */; };
 		182AA5991B203F38002867F5 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 182AA5971B203F38002867F5 /* main_bg.png */; };
 		182AA59D1B20401E002867F5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182AA59C1B20401E002867F5 /* LoginViewController.m */; };
+		1884F9C91B2544F200739515 /* appicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1884F9C71B2544F200739515 /* appicon@2x.png */; };
+		1884F9CA1B2544F200739515 /* appicon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1884F9C81B2544F200739515 /* appicon@3x.png */; };
+		1884F9CC1B25638900739515 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1884F9CB1B25638900739515 /* Default-568h@2x.png */; };
 		189D05991B2037B3002D161E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189D05981B2037B3002D161E /* UIKit.framework */; };
 		189D059B1B2037C2002D161E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189D059A1B2037C2002D161E /* CoreGraphics.framework */; };
 		18D612381B202FDD00542610 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D612371B202FDD00542610 /* main.m */; };
@@ -73,6 +76,9 @@
 		182AA5971B203F38002867F5 /* main_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bg.png; sourceTree = "<group>"; };
 		182AA59B1B20401E002867F5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		182AA59C1B20401E002867F5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1884F9C71B2544F200739515 /* appicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon@2x.png"; sourceTree = "<group>"; };
+		1884F9C81B2544F200739515 /* appicon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon@3x.png"; sourceTree = "<group>"; };
+		1884F9CB1B25638900739515 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		189D05951B203788002D161E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		189D05981B2037B3002D161E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		189D059A1B2037C2002D161E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +145,8 @@
 		182AA5951B203EDC002867F5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1884F9C71B2544F200739515 /* appicon@2x.png */,
+				1884F9C81B2544F200739515 /* appicon@3x.png */,
 				18049B641B20922A00B55801 /* login */,
 				182AA5971B203F38002867F5 /* main_bg.png */,
 			);
@@ -264,6 +272,7 @@
 		18D612291B202FDD00542610 = {
 			isa = PBXGroup;
 			children = (
+				1884F9CB1B25638900739515 /* Default-568h@2x.png */,
 				18D612341B202FDD00542610 /* signin */,
 				18D6124E1B202FDD00542610 /* signinTests */,
 				189D05971B203793002D161E /* Frameworks */,
@@ -425,11 +434,14 @@
 				18049B681B209B4A00B55801 /* login_textfield_mid.png in Resources */,
 				182AA5981B203F38002867F5 /* login_bg.png in Resources */,
 				18049B6A1B20A77B00B55801 /* login_textfield_bottom.png in Resources */,
+				1884F9CA1B2544F200739515 /* appicon@3x.png in Resources */,
+				1884F9CC1B25638900739515 /* Default-568h@2x.png in Resources */,
 				18D612411B202FDD00542610 /* Main.storyboard in Resources */,
 				18049B661B20925900B55801 /* login_textfield_top.png in Resources */,
 				18D612431B202FDD00542610 /* Images.xcassets in Resources */,
 				182AA5991B203F38002867F5 /* main_bg.png in Resources */,
 				18049B6D1B20B55900B55801 /* login_btn_blue_nor.png in Resources */,
+				1884F9C91B2544F200739515 /* appicon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

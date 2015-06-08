@@ -8,7 +8,7 @@
 
 #import "BaseEntity.h"
 
-static NSString * const MSG = @"msg";
+static NSString * const MSG = @"message";
 static NSString * const SUCCESS = @"success";
 static NSString * const RES = @"res";
 
@@ -18,12 +18,10 @@ static NSString * const RES = @"res";
 {
     NSString *responseJSON = [NSString stringWithFormat:@"%@",json];
     DLog(@"%@",responseJSON);
-    NSData *jsonData = [responseJSON dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *dic_json = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
-    if ([NSJSONSerialization isValidJSONObject:dic_json]) {
+    if ([NSJSONSerialization isValidJSONObject:json]) {
         BaseEntity *baseEntity = [[BaseEntity alloc] init];
-        baseEntity.success =  [dic_json objectForKey:SUCCESS] ;
-        baseEntity.msg = [dic_json objectForKey:MSG];
+        baseEntity.success =  [[json objectForKey:SUCCESS] boolValue] ;
+        baseEntity.msg = [json objectForKey:MSG];
         return baseEntity;
     }
     return nil;
@@ -31,31 +29,28 @@ static NSString * const RES = @"res";
 
 + (BaseEntity *)parseResponseStatusJSON:(id)json
 {
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:nil];
+    
     //格式化打印输出至控制台
-    NSString *responseJSON = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    DLog(@"%@",responseJSON);
-    NSDictionary *dic_json = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
-    if ([NSJSONSerialization isValidJSONObject:dic_json]) {
+    DLog(@"%@",json);
+    
+    if ([NSJSONSerialization isValidJSONObject:json]) {
         
         BaseEntity *baseEntity = [[BaseEntity alloc] init];
-        baseEntity.success =  [dic_json objectForKey:SUCCESS] ;
-        baseEntity.msg = [dic_json objectForKey:MSG];
+        baseEntity.success =  [[json objectForKey:SUCCESS] boolValue] ;
+        baseEntity.msg = [json objectForKey:MSG];
         return baseEntity;
     }
     return nil;
 }
 
-+(BaseEntity *)parseResponseUpdateJSON:(id)json
++(BaseEntity *)parseResponseUpdateJSON:(id)dic_json
 {
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:nil];
     //格式化打印输出至控制台
-    NSString *responseJSON = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    DLog(@"%@",responseJSON);
-    NSDictionary *dic_json = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+    DLog(@"%@",dic_json);
+    
     if ([NSJSONSerialization isValidJSONObject:dic_json]) {
         BaseEntity *baseEntity = [[BaseEntity alloc] init];
-        baseEntity.success =  [dic_json objectForKey:SUCCESS] ;
+        baseEntity.success =  [[dic_json objectForKey:SUCCESS] boolValue] ;
         id res = [dic_json objectForKey:RES];
         baseEntity.version = [res objectForKey:@"versionName"];
         baseEntity.updateURL = [res objectForKey:@"updateURL"];

@@ -10,11 +10,11 @@
 
 @implementation UserEntity
 
-+(UserEntity *) initWithLogin:(NSString *)loginId andPassword:(NSString *)password
++(UserEntity *) initWithLoginId:(NSString *)loginId andPassword:(NSString *)password
 {
     UserEntity * userEntity = [[UserEntity alloc] init];
     userEntity.loginId= loginId;
-    userEntity.password = password;
+    userEntity.loginPassword = password;
     return userEntity;
 }
 @end

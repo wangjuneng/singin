@@ -166,4 +166,14 @@
     }
 }
 
++ (NSString * ) createSignString:(NSArray *)params
+{
+    NSMutableString * buffer = [NSMutableString stringWithCapacity:20];
+    
+    [params enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [buffer appendString:obj];
+    }];
+    return [[NSString stringWithString:buffer] md5];
+}
+
 @end

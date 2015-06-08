@@ -18,6 +18,6 @@
  *  @param success
  *  @param failed  
  */
-- (void)executeLoginTaskWithUser:(UserEntity *)user success:(SuccessBlock)success failed:(FailedBlock)failed;
+- (void)executeLoginTaskWithUser:(id)parameters success:(SuccessBlock)success failed:(FailedBlock)failed;
 
 @end

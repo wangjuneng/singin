@@ -13,7 +13,7 @@
 @interface BaseEntity : NSObject
 
 @property (nonatomic,copy) NSString *_id;//ID
-@property (nonatomic,copy) NSString *success;//状态
+@property (nonatomic,assign) BOOL  success;//状态
 @property (nonatomic,copy) NSString *msg;//状态信息
 @property (nonatomic,copy) NSString *version;//版本号
 @property (nonatomic,copy) NSString *updateURL;//升级URL

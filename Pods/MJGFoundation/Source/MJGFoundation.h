@@ -20,7 +20,7 @@
 #import "NSString-MJGCrypto.h"
 #import "NSString-MJGURLEncode.h"
 
-#import "UIButton-MJGAddtions.h"
+#import "UIButton-MJGAdditions.h"
 
 #import "UIColor-MJGAdditions.h"
 

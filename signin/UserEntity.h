@@ -10,7 +10,7 @@
 
 @interface UserEntity : BaseEntity
 @property(copy,nonatomic) NSString *loginId;  //帐号
-@property(copy,nonatomic) NSString *password; //密码
+@property(copy,nonatomic) NSString *loginPassword; //密码
 
 /**
  *  UserEntity 构造方法
@@ -20,6 +20,6 @@
  *
  *  @return
  */
-+(UserEntity *) initWithLogin:(NSString *) loginId andPassword:(NSString * ) password;
++(UserEntity *) initWithLoginId:(NSString *) loginId andPassword:(NSString * ) password;
 
 @end

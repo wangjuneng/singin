@@ -20,9 +20,12 @@
     if (self = [super init]){
         self.manager = [AFHTTPSessionManager manager];
         //请求参数序列化类型
-        self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        self.manager.requestSerializer = [AFHTTPRequestSerializer serializer];
         //响应结果序列化类型
         self.manager.responseSerializer = [RTJSONResponseSerializerWithData serializer];
+        
+        [self.manager.requestSerializer setValue:@"parse-application-id-removed" forHTTPHeaderField:@"X-Parse-Application-Id"];
+        [self.manager.requestSerializer setValue:@"parse-rest-api-key-removed" forHTTPHeaderField:@"X-Parse-REST-API-Key"];
     }
     return self;
 }

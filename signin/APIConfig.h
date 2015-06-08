@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 /***************SERVER HOST***************/
 
-#define SERVER_HOST @"192.168.1.1:3000/"
-#define SERVER_NAME @"singin/"
+#define SERVER_HOST @"192.168.1.101:8080/"
+#define SERVER_NAME @"signin/app/"
 
 /***************SERVER API***************/
 //登录
-#define API_LOGIN @""
+#define API_LOGIN @"appv1!checkUser.json"
 
 @interface APIConfig : NSObject
 

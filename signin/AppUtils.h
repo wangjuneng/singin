@@ -54,4 +54,8 @@
 //验证手机号码合法性（正则）
 + (BOOL)checkPhoneNumber:(NSString *)phoneNumber;
 
+//******************* 生成签名 *******************************/
++ (NSString *) createSignString:(NSArray * ) params;
+
+
 @end
