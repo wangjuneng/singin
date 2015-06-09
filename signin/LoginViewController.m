@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginHandler.h"
 #import "UserEntity.h"
+#import "MainViewController.h"
 
 @interface LoginViewController()
 
@@ -88,11 +89,14 @@
     
     [AppUtils showProgressMessageWithGradient: @"数据加载中..."];
     
+    //手机唯一标识
+    NSString * imei = [OpenUDID value];
+    
     //生成签名
-    NSString * sign = [AppUtils createSignString:@[loginIdTxt,passwordMd5Txt]];
+    NSString * sign = [AppUtils createSignString:@[loginIdTxt,passwordMd5Txt,imei]];
     
     
-    NSDictionary *parameters = @{@"loginId":loginIdTxt,@"loginPassword":passwordMd5Txt,@"sign":sign};
+    NSDictionary *parameters = @{@"loginId":loginIdTxt,@"loginPassword":passwordMd5Txt,@"sign":sign,@"imei":imei};
     
     [_loginHandler executeLoginTaskWithUser: parameters success:^(UserEntity * obj) {
    
@@ -100,7 +104,9 @@
         if([obj success])
         {
             [AppUtils dismissHUD];
-            [AppUtils showAlertMessage:@"登录成功"];
+            //跳转至主页面
+            MainViewController * mainViewController = [MainViewController newInstance];
+            [self.navigationController pushViewController:mainViewController animated:YES];
         }
         else
         {

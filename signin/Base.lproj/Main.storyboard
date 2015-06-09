@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="dPU-sK-mWk" userLabel="登录背景">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-Og-j8B" userLabel="登录帐号密码区">
                                 <rect key="frame" x="0.0" y="140" width="320" height="200"/>
                                 <subviews>
@@ -38,7 +34,7 @@
                                                     <constraint firstAttribute="width" constant="34" id="eu1-hq-c0I"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nqu-iA-rpd" userLabel="帐号输入框">
@@ -93,7 +89,7 @@
                                                     <constraint firstAttribute="width" constant="34" id="r5L-14-Rrt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWc-mG-yEZ">
@@ -155,6 +151,10 @@
                                     <constraint firstItem="PJT-Wf-dTl" firstAttribute="top" secondItem="zYp-Bj-cuW" secondAttribute="bottom" constant="1" id="vSw-39-D7g"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="dPU-sK-mWk" userLabel="登录背景">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -179,6 +179,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9d-NF-FhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="557" y="292"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="1Ht-je-I6v">
+            <objects>
+                <viewController storyboardIdentifier="mainViewController" id="jfe-FN-wAG" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i2V-wr-xPQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ur7-yh-vbc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hPc-Mf-JVa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="K7t-re-GhC" userLabel="主背景">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="K7t-re-GhC" secondAttribute="trailing" id="GMN-vF-inD"/>
+                            <constraint firstAttribute="bottom" secondItem="K7t-re-GhC" secondAttribute="bottom" id="MmH-kQ-Mvv"/>
+                            <constraint firstItem="K7t-re-GhC" firstAttribute="leading" secondItem="hPc-Mf-JVa" secondAttribute="leading" id="gqE-zg-dmX"/>
+                            <constraint firstItem="K7t-re-GhC" firstAttribute="top" secondItem="hPc-Mf-JVa" secondAttribute="top" id="r0A-t3-DHJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fcn-wQ-Sfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="292"/>
         </scene>
     </scenes>
     <resources>
